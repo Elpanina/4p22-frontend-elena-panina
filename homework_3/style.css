@@ -1,0 +1,16 @@
+td {
+    color: rgb(16, 4, 27);
+    background-color: rgb(240, 215, 178);
+    outline:auto;
+    border: 2px;
+    text-align: center;
+}
+
+th {
+    color:black;
+    background-color: #f3bfbf;
+    outline:auto;
+    border: 2px;
+    text-align: center;
+}
+
