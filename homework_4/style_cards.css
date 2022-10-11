@@ -2,28 +2,40 @@
     box-sizing: border-box                
 }
 
-.body {
+body {
     color:#141414;
-    margin: 0;
+    background-image: linear-gradient(33deg, #a4e7b0 0%, rgba(17, 236, 109, 0.467) 26%, rgba(44, 134, 236, 0.467)45%,rgba(102, 21, 207, 0.467)635%,rgba(70, 4, 100, 0.467)100%);
+    margin: 0 0 0 0;
     font-weight: 400;
     font-family: sans-serif;
     font-size: 15px;
 }    
 
-.header__desktop {
-    color: darkorchid;
-    font-family: sans-serif;
+.header_desktop {
+    color: rgb(97, 25, 133);
     border-bottom: none;
-    margin: 10px auto;
+    margin: auto;
     padding: 20px 20px;
-    background-color: #d3f069;
-    display: flex;
+    background-color: #d5ec81;
+    display:flex;
     text-align: center;
+}
+
+.desc{
+    min-height: 10em;
+    display: table-cell;
     vertical-align: middle;
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 10px;
@@ -32,49 +44,72 @@
     font-family: sans-serif;
 }
 
-.logo-img {
-    width: 150px;
-    height: 150px;
-    margin: 10px auto;
-}
-
 .card {
+    height: 500px;
+    width: 300px;
     border:1px;
-    border-color: #f56767;
+    border-color: #60059c;
+    background-color: #d8a6f0;
     border-style: solid;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-img {
     border-radius: 15px;
     border-color: rgb(216, 136, 31);
-    height: 400px;
-    width: 300px;
+    height: 300px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.price, .cell {
+.title {
+    font-family: serif;
+}
+
+.description {
+    flex: 1 1 auto;
+}
+
+.price {
+    text-align: center;
+    color: #141414;
+    font-weight: bolder;  
+    font-size:larger;
+    background-color: #f0f5aa;
+    padding: 5px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.cell {
     text-align: center;
     color: #141414;
     border: 1px solid #e97ee9;
     border-radius: 10px;
     background-color: #ccebd1;
     padding: 5px;
-    margin: 5px auto;
+    margin-top: 25px;
     margin-left: 25px;
     margin-right: 25px;
     box-shadow: 0 0 12px rgba(0,0,0,0.5);
 }
 
-.foot {
-    text-align: center;
+.footer {
     display: block;
     margin: 0px;
     padding: 10px;
     background-color: #83cf91;
+    text-align: center;
 }
 
 .contacts {
