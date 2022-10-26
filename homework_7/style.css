@@ -78,7 +78,18 @@ body {
     
 }
 
-.button-blok{
+.button-bloсk {
     padding-left: 45px;
 }
-.button-blok__enter{}
+
+.button-blok__enter {
+    width: 180px;
+    height: 52px;
+    background-color: #1A226B;
+    border: #1A226B 2px solid;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    color: white;
+}
