@@ -1,10 +1,13 @@
 *{
     box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
 }
 
-body{
+body {
+    position: absolute;
     margin: 0;
     min-height: 100vh;
+    min-width: calc(100vw - 17px);
     display: flex;
     flex-direction: column;
 }
@@ -18,17 +21,17 @@ body{
     left: 0px;
     height: 60px;
     width: 100%;
-    background: blue;
+    background: #590BFF;
     margin: 0;
+    z-index: 2;
 }
 
 .header-caption{
     text-shadow: 4px 3px 7px rgba(0,0,0,0.5);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
     color: aliceblue;
+    font-size: 24pt;
     text-align: left;
-    margin-left: 20px;
+    margin: 6px 20px;
 }
 
 .main{
@@ -39,15 +42,23 @@ body{
 }
 
 .main-sidebar{
+    position: fixed;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
+    /* overflow-y: auto; */
+    width: 20%;
+    height: calc(100vh - 120px);
+}
+
+.main-sidebar__placeholder {
+    display: flex;
+    flex-direction: column;
     width: 20%;
     height: calc(100vh - 120px);
 }
 
 .main-sidebar__title{
-    text-align: center;
+    margin-left: 25px;
 }
 
 .main-sidebar__caption{
@@ -55,9 +66,25 @@ body{
 }
 
 .main-section{
-    position: relative;
+    width: 80%;
 }
-.main-section__caption{}
+
+.main-section__caption {
+    position: sticky;
+    top: 60px;
+    background-color: #590BFF;
+    font-weight: 700;
+    padding: 4px 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: aliceblue;
+}
+
+.main-section > ul {
+    list-style-type: none;
+    padding-inline-start: 16px;
+}
+
 .main-section__content-list{}
 .main-section__content-element{}
 
@@ -66,10 +93,15 @@ body{
     height: 40px;
     margin-top: auto;
     text-align: right;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    padding-right: 15px;
 }
 
 .footer__content{
-    font-family: sans-serif;
+    color: aliceblue;
+    font-weight: 700;
     font-size: small;
     padding: 10px;
 }
