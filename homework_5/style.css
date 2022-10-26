@@ -46,17 +46,10 @@ body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    /* overflow-y: auto; */
     width: 20%;
     height: calc(100vh - 120px);
-}
-
-.main-sidebar__title{
-    margin-left: 25px;
-}
-
-.main-sidebar__caption{
-   margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .main-section{
@@ -80,9 +73,6 @@ body {
     list-style-type: none;
     padding-inline-start: 16px;
 }
-
-.main-section__content-list{}
-.main-section__content-element{}
 
 .footer{
     background: rgb(100, 100, 252);
