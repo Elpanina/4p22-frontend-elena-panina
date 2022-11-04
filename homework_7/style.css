@@ -5,17 +5,17 @@
 
 body {
     margin: 0;
+    position: relative;
 }
 
-.shading-block{
+.shading-block {
     background: #1B2473;
     width: 100vw;
     height: 100vh;
-    position: relative;
     z-index: 0;
 }
 
-.form-wrapper{
+.form-wrapper {
     display: flex;
     flex-direction: column;
     width: 600px;
@@ -27,16 +27,17 @@ body {
     z-index: 1;
     border: 1px solid #1B2473;
     border-radius: 20px;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.25);
 }
 
-.form-title{
+.form-title {
     margin-top: 26px;
-    text-align: center;
     font-weight: 700;
     font-size: 50px;
     line-height: 50px;
-    color: #787878;
     margin-bottom: 29px;
+    text-align: center;
+    color: #787878;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -45,14 +46,16 @@ body {
     color: #787878;
     display: flex;
     flex-wrap: wrap;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .input-group > label {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    padding-bottom: 3px;
-    padding-left: 8px;
+    /* padding-bottom: 3px;
+    padding-left: 8px; */
+    padding-bottom: 0.188em;
+    padding-left: 0.5em;
 }
 
 .input-group > input {
@@ -60,8 +63,10 @@ body {
     border: 2px #787878 solid;
     border-radius: 10px;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 36px;
+    /* font-size: 28px;
+    line-height: 36px; */
+    font-size: 1.75em;
+    line-height: 1.286em;
     width: 100%;
     padding-left: 15px;
     padding-top: 6;
@@ -78,7 +83,12 @@ body {
     color: #787878;
 }
 
-.input-group__checkbox {
+.checkbox-group > label {
+    /* padding-left: 10px; */
+    padding-left: 0.714em;
+}
+
+.checkbox-group__checkbox {
     width: 24px;
     height: 24px;
     border: 2px solid #787878;
@@ -88,10 +98,6 @@ body {
     -moz-appearance: none;
     -webkit-appearance: none;
     -o-appearance: none; */
-}
-
-.checkbox-group > label {
-    padding-left: 10px;
 }
 
 .button-bloсk {
@@ -114,4 +120,137 @@ body {
     font-size: 32px;
     line-height: 16px;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .shading-block {
+        min-height: calc(100vw / 768 * 400);
+    }
+
+    .form-wrapper {
+        width: calc(100vw / 768 * 728);
+        height: calc(100vh / 768 * 728);
+        left: calc(100vw / 768 * 20);
+        top: calc(100vh / 768 * 20);
+        border-radius: calc(100vw / 768 * 20);
+        min-height: calc(100vw / 768 * 365);
+    }
+
+    .form-title {
+        margin-top: calc(100vw / 768 * 38);
+        font-size: calc(100vw / 768 * 60);
+        line-height: calc(100vw / 768 * 50);
+        margin-bottom: calc(100vw / 1440 * 29);
+    }
+
+    .input-group {
+        padding-top: 0;
+        padding-right: calc(100vw / 768 * 45);
+        padding-bottom: calc(100vw / 768 * 16);
+        padding-left: calc(100vw / 768 * 45);
+        /* padding: 0 45px 16px 45px; */
+        font-size: calc(100vw / 768 * 16);
+        line-height: calc(100vw / 768 * 16);
+    }
+
+    .input-group > label {
+        padding-bottom: 0.5em;
+    }
+
+    .input-group > input {
+        border-radius: calc(100vw / 768 * 10);
+    }
+
+    .checkbox-group {
+        margin-top: calc(100vw / 768 * 3);
+        padding-left: calc(100vw / 768 * 45);
+        font-size: calc(100vw / 768 * 18);
+        line-height: calc(100vw / 768 * 16);
+    }
+
+    .checkbox-group__checkbox {
+        width: calc(100vw / 768 * 32);
+        height: calc(100vw / 768 * 32);
+        border-radius: calc(100vw / 768 * 7);
+    }
+
+    .button-bloсk {
+        padding-top: calc(100vw / 768 * 64);
+        padding-left: calc(100vw / 768 * 45);
+        padding-right: calc(100vw / 768 * 45);
+    }
+    
+    .button-blok__enter {
+        width: calc(100vw / 768 * 220);
+        height: calc(100vw / 768 * 80);
+        border-radius: calc(100vw / 768 * 10);
+        font-size: calc(100vw / 768 * 32);
+        line-height: calc(100vw / 768 * 16);
+        color: white;
+    }
+}
+
+@media screen and (max-width: 768px) and (max-height: 460px) {
+    .button-bloсk {
+        padding-top: calc(100vw / 768 * 5);
+    }
+
+    .button-blok__enter {
+        height: calc(100vw / 768 * 40);
+        font-size: calc(100vw / 768 * 16);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+    .form-wrapper {
+        width: calc(100vw / 1440 * 600);
+        height: calc(100vw / 1440 * 412);
+        top: calc(100vw / 1440 * 82);
+        left: calc(50vw - (100vw / 1440 * 300));
+        border-radius: calc(100vw / 1440 * 20);
+    }
+
+    .form-title {
+        margin-top: calc(100vw / 1440 * 26);
+        font-size: calc(100vw / 1440 * 50);
+        line-height: calc(100vw / 1440 * 50);
+        margin-bottom: calc(100vw / 1440 * 29);
+    }
+
+    .input-group {
+        padding-top: 0;
+        padding-right: calc(100vw / 1440 * 45);
+        padding-bottom: calc(100vw / 1440 * 16);
+        padding-left: calc(100vw / 1440 * 45);
+        /* padding: 0 45px 16px 45px; */
+        font-size: calc(100vw / 1440 * 16);
+        line-height: calc(100vw / 1440 * 16);
+    }
+
+    .checkbox-group {
+        padding-left: calc(100vw / 1440 * 45);
+        font-size: calc(100vw / 1440 * 14);
+        line-height: calc(100vw / 1440 * 16);
+    }
+
+    .checkbox-group__checkbox {
+        width: calc(100vw / 1440 * 24);
+        height: calc(100vw / 1440 * 24);
+        border-radius: calc(100vw / 1440 * 7);
+    }
+
+    .button-bloсk {
+        padding-top: calc(100vw / 1440 * 52);
+        padding-left: calc(100vw / 1440 * 45);
+        padding-right: calc(100vw / 1440 * 45);
+        padding-bottom: calc(100vw / 1440 * 26);
+    }
+    
+    .button-blok__enter {
+        width: calc(100vw / 1440 * 180);
+        height: calc(100vw / 1440 * 52);
+        border-radius: calc(100vw / 1440 * 10);
+        font-size: calc(100vw / 1440 * 32);
+        line-height: calc(100vw / 1440 * 16);
+    }
 }
