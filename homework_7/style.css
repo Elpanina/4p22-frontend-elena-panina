@@ -52,8 +52,6 @@ body {
 }
 
 .input-group > label {
-    /* padding-bottom: 3px;
-    padding-left: 8px; */
     padding-bottom: 0.188em;
     padding-left: 0.5em;
 }
@@ -63,8 +61,6 @@ body {
     border: 2px #787878 solid;
     border-radius: 10px;
     font-weight: 700;
-    /* font-size: 28px;
-    line-height: 36px; */
     font-size: 1.75em;
     line-height: 1.286em;
     width: 100%;
@@ -84,7 +80,6 @@ body {
 }
 
 .checkbox-group > label {
-    /* padding-left: 10px; */
     padding-left: 0.714em;
 }
 
@@ -94,10 +89,6 @@ body {
     border: 2px solid #787878;
     margin: 0;
     border-radius: 7px;
-    /* appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    -o-appearance: none; */
 }
 
 .button-bloсk {
@@ -148,7 +139,6 @@ body {
         padding-right: calc(100vw / 768 * 45);
         padding-bottom: calc(100vw / 768 * 16);
         padding-left: calc(100vw / 768 * 45);
-        /* padding: 0 45px 16px 45px; */
         font-size: calc(100vw / 768 * 16);
         line-height: calc(100vw / 768 * 16);
     }
@@ -222,7 +212,6 @@ body {
         padding-right: calc(100vw / 1440 * 45);
         padding-bottom: calc(100vw / 1440 * 16);
         padding-left: calc(100vw / 1440 * 45);
-        /* padding: 0 45px 16px 45px; */
         font-size: calc(100vw / 1440 * 16);
         line-height: calc(100vw / 1440 * 16);
     }
