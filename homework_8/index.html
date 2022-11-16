@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>Science Calculation System</title>
+</head>
+<body>
+	<script src="js/calc.js"></script>
+	<section class="main">
+		<form class="calc">
+			<div class="calc__numbers">
+				<div class="numbers__first">
+					<label for="first-number">Первое число</label>
+					<input type="text" name="first_number" id="first_number" placeholder="0">
+				</div>
+				<div class="numbers__operation">
+					<input type="text" maxlength="1" name="calc_operation" id="calc_operation">
+				</div>
+				<div class="numbers__second">
+					<label for="second-number">Второе число</label>
+					<input type="text" name="second_number" id="second_number" placeholder="0">
+				</div>
+			</div>
+			<div class="calc__buttons">
+				<button type="button" class="buttons__operate" onclick="calcClick()">Calculate</button>
+				<button type="reset" class="buttons__reset">Reset</button>
+			</div>
+			<div class="calc__console">
+				<textarea name="console_output" id="console_output" readonly></textarea>
+			</div>
+		</form>
+	</section>
+</body>
+</html>

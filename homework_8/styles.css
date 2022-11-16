@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto ', normal;
+}
+
+input::placeholder {
+    color: #CCCCCC;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #bacebb;
+    position: relative;
+    min-width: 480px;
+    min-height: 220px;
+}
+.calc {
+    position: absolute;
+    width: 550px;
+    height: 250px;
+    left: calc((100vw / 2) - 275px);
+    top: calc((100vh / 2) - 125px);
+    background-color: rgb(117, 138, 184);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.calc__numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.calc input {
+    font-family: 'Roboto ', monospace;
+    color: #5e5e5e;
+    font-size: 16px;
+    line-height: 20px;
+    width: 14em;
+    text-align: center;
+}
+
+.calc label {
+    color: #bacebb;
+}
+
+.numbers__first {
+    display: flex;
+    flex-direction: column;
+}
+
+.numbers__operation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.numbers__operation input {
+    width: 3em;
+    font-weight: 900;
+}
+
+.numbers__second {
+    display: flex;
+    flex-direction: column;
+}
+
+.calc__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calc__buttons button {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.buttons__operate {
+    background-color: cornflowerblue;
+    color: #CCCCCC;
+}
+
+.buttons__operate:hover {
+    color: rgb(10, 10, 105);
+}
+
+.buttons__operate:active {
+    color: blue;
+    background-color: rgb(78, 135, 240);
+}
+
+.buttons__reset {}
+
+.calc__console {
+    width: 100%;
+    height: 100%;
+}
+
+.calc__console textarea {
+    resize: none;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    border: #5e5e5e 1px solid;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background-color: #babcce;
+}
