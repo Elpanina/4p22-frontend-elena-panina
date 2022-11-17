@@ -1,18 +1,12 @@
 'use strict'
 
-function logOut(text) {
-    console_output.value = console_output.value.substring(console_output.value.indexOf('>') + 1);
-    console_output.value = '>' + text + '\n' + console_output.value;
-    console.log(text);
-}
+const first_number = document.getElementById('first_number');
+const second_number = document.getElementById('second_number');
+const calc_operation = document.getElementById('calc_operation');
+const button_calc = document.getElementsByClassName('buttons__operate')[0];
+const console_output = document.getElementById('console_output');
 
-function errorOut(text) {
-    console_output.value = console_output.value.substring(console_output.value.indexOf('>') + 1);
-    console_output.value = '>' + text + '\n' + console_output.value;
-    console.error(text);
-}
-
-function calcClick() {
+button_calc.addEventListener('click', () => {
     if (first_number === undefined || first_number === null || first_number.value === '') {
         errorOut('Первое число не указано!');
         return;
@@ -64,4 +58,16 @@ function calcClick() {
             return;
         }
     }
+})
+
+function logOut(text) {
+    console_output.value = console_output.value.substring(console_output.value.indexOf('>') + 1);
+    console_output.value = '>' + text + '\n' + console_output.value;
+    console.log(text);
+}
+
+function errorOut(text) {
+    console_output.value = console_output.value.substring(console_output.value.indexOf('>') + 1);
+    console_output.value = '>' + text + '\n' + console_output.value;
+    console.error(text);
 }

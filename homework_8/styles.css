@@ -105,8 +105,6 @@ input::placeholder {
     background-color: rgb(78, 135, 240);
 }
 
-.buttons__reset {}
-
 .calc__console {
     width: 100%;
     height: 100%;
