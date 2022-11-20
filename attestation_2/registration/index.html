@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Form</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <div class="header">
+        <img src="../assets/20489b6c748377c7f19e0e60473af7ab.png">
+        <div class="header__title">PCS Frontend</div>
+        <div class="header__button-block">
+            <a class="button-block__register">Регистрация</a>
+            <a class="button-block__login" href="../login/index.html">Вход</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__form-wrapper">
+            <form action="/404.html" method="post" id="register-form">
+                <h1 class="form-wrapper__title">Вход</h1>
+                <div class="form-wrapper__input-group">
+                    <div class="input-group__label-email">
+                        <label for="email-input">Email</label>
+                        <div id="email-message" class="hidden">email плох</div>
+                    </div>
+                    <input id="email-input" type="email" placeholder="Введите электронную почту" name="email" required autocomplete="off">
+                </div>
+                <div class="form-wrapper__input-group">
+                    <div class="input-group__label-password">
+                        <label for="password-input">Пароль</label>
+                        <div id="password-message" class="hidden">Пароль плох</div>
+                    </div>
+                    <input id="password-input" type="password" placeholder="Введите пароль" name="password" required autocomplete="off">
+                </div>
+                <div class="form-wrapper__input-group">
+                    <div class="input-group__label-confirmation">
+                        <label for="confirmation-input">Подтверждение пароля</label>
+                        <div id="confirmation-message" class="hidden">Подтверждение плох</div>
+                    </div>
+                    <input id="confirmation-input" type="password" placeholder="Подтвердите пароль" name="confirmation" required autocomplete="off">
+                </div>
+                <div class="form-wrapper__radio-group">
+                    <label>Пол</label>
+                    <div class="radio-group__radio-item">
+                        <input type="radio" value="male" id="male-option" name="sex" required>
+                        <label for="male-option">Мужчина</label>
+                    </div>
+                    <div class="radio-group__radio-item">
+                        <input type="radio" value="female" id="female-option" name="sex" checked>
+                        <label for="female-option">Женщина</label>
+                    </div>                    
+                </div>
+                <div class="form-wrapper__text-group">
+                    <label for="story">О себе</label>
+                    <textarea rows="" id="story" name="story" placeholder="Расскажиет о себе..." spellcheck="false" wrap="soft" autocomplete="off"></textarea>
+                </div>
+                <div class="form-wrapper__checkbox-group">
+                    <input type="checkbox" checked id="subscribtion" name="subscribtion">
+                    <label for="subscribtion">Я согласен получать обновления на почту</label>
+                </div>
+                <div class="form-wrapper__button-bloсk">
+                    <button type="submit" id="register-button" class="button-bloсk__enter">Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="validation.js"></script>
+</body>
+</html>
