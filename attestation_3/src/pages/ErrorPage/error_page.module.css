@@ -1,0 +1,27 @@
+.main {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0,rgba(255,62,47,0.4), rgba(255,62,47,0.8));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.middle_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.caption {
+    text-align: center;
+}
+
+.caption > h1 {
+    font-size: 2.5rem;
+}
+
+.caption > a, .caption > p {
+    font-size: 1.5rem;
+}

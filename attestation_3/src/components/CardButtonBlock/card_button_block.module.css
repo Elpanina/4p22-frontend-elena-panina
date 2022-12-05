@@ -1,0 +1,13 @@
+.card_cell {
+    text-align: center;
+    color: #141414;
+    border: 1px solid  #faf0ed;
+    border-radius: 10px;
+    background-color: #faf0ed;
+    padding: 5px;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+    height: 31px;
+}

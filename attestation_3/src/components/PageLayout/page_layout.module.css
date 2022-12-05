@@ -1,0 +1,16 @@
+.container {
+    background-color: #f4e2db;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100% - 88px);
+    min-width: calc(374px - 3rem);
+    padding-top: 80px;
+}
+
+@media screen and (max-width: 475px) {
+    .container {
+        padding-top: 240px;
+        min-height: calc(100% - 330px);
+    }
+}

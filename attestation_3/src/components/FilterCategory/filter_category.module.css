@@ -1,0 +1,31 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;  /*TODO: одинаковая ширина в идеале*/
+    height: fit-content;
+    background-color: #393a4a;
+    padding: 3px 10px 2px 10px;
+    border: 1px #393a4a solid;
+    border-radius: 14px;
+    margin: 1px 2px 4px 2px;
+}
+
+.main label {
+    color: #faf0ed;
+    font-family: monospace;
+    font-weight: 900;
+    margin: 2px 3px 3px 3px;
+    padding: 0;
+}
+
+.main input {
+    display: none;
+}
+
+.selected {
+    background-color: #faf0ed;
+}
+
+.selected label {
+    color: #393a4a;
+}

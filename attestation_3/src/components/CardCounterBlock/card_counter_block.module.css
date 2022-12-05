@@ -1,0 +1,89 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+    height: 100%;
+}
+
+.main.vertical {
+    flex-direction: column;
+    height: initial;
+}
+
+.main_buttons_basket {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.main_buttons_basket.vertical_up {
+    margin-top: 8px;
+}
+
+.main_buttons_counter {
+    display: flex;
+    flex-direction: row;
+}
+
+.main_buttons_counter.vertical_up {
+    margin-top: 8px;
+}
+
+.main_buttons_basket button {
+    padding: 5px;
+    min-width: 27px;
+}
+
+.main_buttons_counter button {
+    padding: 5px;
+    min-width: 27px;
+}
+
+.button_basket {
+    flex-grow: 1;
+    border-radius: 10px;
+}
+
+.button_up.vertical {
+    margin-left: 0;
+}
+
+.button_up {
+    margin-left: 4px;
+    margin-right: 1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-weight: 900;
+}
+
+.button_down {
+    margin-right: 4px;
+    margin-left: 1px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 900;
+}
+
+.button_down.vertical {
+    margin-right: 0;
+}
+
+.count {
+    width: 3em;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 1rem;
+    min-width: 27px;
+    border: 0;
+}
+
+.count.vertical {
+    width: 100%
+}
+
+.count:active, .count:hover, .count:focus {
+    outline: 0;
+    outline-offset: 0;
+}
