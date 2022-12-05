@@ -3,11 +3,7 @@ import './App.css';
 import {createHashRouter as createRouter, Navigate, RouterProvider} from 'react-router-dom';
 import ErrorPage from './pages/ErrorPage';
 import CatalogPage from './pages/CatalogPage';
-import ItemPage from './pages/ItemPage';
-import BasketPage from './pages/BasketPage';
-import FeedbackPage from './pages/FeedbackPage';
-import {prepareItemPageData, STORAGE_COUNTS_KEY, updateCategories} from './utils/helpers';
-import AboutPage from './pages/AboutPage';
+import {STORAGE_COUNTS_KEY, updateCategories} from './utils/helpers';
 
 function appRouter(counts, setCounts, cards, categories, showFilter, setShowFilter, filter, setFilter, isLoaded) {
     return createRouter([
@@ -31,32 +27,6 @@ function appRouter(counts, setCounts, cards, categories, showFilter, setShowFilt
                                   setShowFilter={setShowFilter}
                                   filter={filter}
                                   setFilter={setFilter}/>,
-            errorElement: <ErrorPage/>
-        },
-        {
-            path: '/catalog/item/:id',
-            element: <ItemPage cards={cards}
-                               counts={counts}
-                               setCounts={setCounts}
-                               isLoaded={isLoaded}/>,
-            loader: ({ request, params }) => prepareItemPageData(params, cards, isLoaded),
-            errorElement: <ErrorPage/>
-        },
-        {
-            path: '/basket',
-            element: <BasketPage counts={counts}
-                                 setCounts={setCounts}
-                                 cards={cards}/>,
-            errorElement: <ErrorPage/>
-        },
-        {
-            path: '/feedback',
-            element: <FeedbackPage counts={counts}/>,
-            errorElement: <ErrorPage/>
-        },
-        {
-            path: '/about',
-            element: <AboutPage counts={counts}/>,
             errorElement: <ErrorPage/>
         },
         {
